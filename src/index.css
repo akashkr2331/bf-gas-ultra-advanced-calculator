@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Main Styles for Blast Furnace Gas Calculator */
+:root {
+  --primary-color:rgb(20, 21, 55);
+  --secondary-color: #479832;
+  --accent-color: #3498db;
+  --light-color: #ecf0f1;
+  --dark-color: #34495e;
+  --success-color: #2ecc71;
+  --warning-color: #f39c12;
+  --error-color: #e74c3c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border-radius: 5px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+.credit {
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  main {
+      grid-template-columns: 1fr 1fr;
+  }
+}
+
+.calculator-panel, .results-panel {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.gas-composition {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.gas-composition h3 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.calculate-btn {
+  background-color: var(--accent-color);
+  color: white;
+  flex: 2;
+}
+
+.calculate-btn:hover {
+  background-color: #2980b9;
+}
+
+.reset-btn {
+  background-color: #95a5a6;
+  color: white;
+  flex: 1;
+}
+
+.reset-btn:hover {
+  background-color: #7f8c8d;
+}
+
+.details-btn {
+  background-color: var(--primary-color);
+  color: white;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.details-btn:hover {
+  background-color: var(--dark-color);
+}
+
+.results-panel h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--light-color);
+}
+
+.warning-messages {
+  margin-bottom: 15px;
+}
+
+.warning-messages .warning {
+  background-color: rgba(243, 156, 18, 0.1);
+  border-left: 4px solid var(--warning-color);
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.results-summary {
+  background-color: var(--light-color);
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ddd;
+}
+
+.result-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.result-label {
+  font-weight: 600;
+}
+
+.result-value {
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.detailed-results {
+  display: none;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.detailed-results.visible {
+  display: block;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border-radius: 5px;
+  font-size: 0.9rem;
+} 
